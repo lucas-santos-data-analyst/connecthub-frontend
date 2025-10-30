@@ -1,0 +1,19 @@
+<div class="select-wrapper">
+  @if (label) {
+    <label class="select-label">{{ label }}</label>
+  }
+
+  <mat-form-field appearance="outline" class="custom-select">
+    <mat-select [formControl]="selected" [required]="required" [placeholder]="placeholder">
+      @for (option of options; track option.value) {
+        <mat-option [value]="option.value" [disabled]="option.disabled || false">
+          {{ option.label }}
+        </mat-option>
+      }
+    </mat-select>
+
+    @if (selected.hasError('required') && selected.touched) {
+      <mat-error>{{ errorMessage || 'Este campo é obrigatório' }}</mat-error>
+    }
+  </mat-form-field>
+</div>
