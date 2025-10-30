@@ -6,14 +6,12 @@ import {
   ReactiveFormsModule,
   FormControl,
 } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
 import { SelectOptionI } from '../../interfaces/SelectOptionI';
 
 @Component({
   selector: 'app-select',
   standalone: true,
-  imports: [MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './select.html',
   styleUrl: './select.scss',
   providers: [

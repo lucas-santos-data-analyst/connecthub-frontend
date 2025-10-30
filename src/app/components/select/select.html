@@ -3,17 +3,24 @@
     <label class="select-label">{{ label }}</label>
   }
 
-  <mat-form-field appearance="outline" class="custom-select">
-    <mat-select [formControl]="selected" [required]="required" [placeholder]="placeholder">
+  <div class="select-container">
+    <select [formControl]="selected" [required]="required" class="custom-select">
+      <option value="" disabled selected>{{ placeholder }}</option>
       @for (option of options; track option.value) {
-        <mat-option [value]="option.value" [disabled]="option.disabled || false">
+        <option [value]="option.value" [disabled]="option.disabled || false">
           {{ option.label }}
-        </mat-option>
+        </option>
       }
-    </mat-select>
+    </select>
 
-    @if (selected.hasError('required') && selected.touched) {
-      <mat-error>{{ errorMessage || 'Este campo é obrigatório' }}</mat-error>
-    }
-  </mat-form-field>
+    <div class="arrow-icon">
+      <span class="chevron"></span>
+    </div>
+  </div>
+
+  @if (selected.hasError('required') && selected.touched) {
+    <span class="error-message">
+      {{ errorMessage || 'Este campo é obrigatório' }}
+    </span>
+  }
 </div>
