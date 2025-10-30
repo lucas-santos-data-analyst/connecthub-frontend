@@ -8,6 +8,11 @@
     font-weight: 400;
     color: #9e9e9e;
     letter-spacing: 0.5px;
+
+    .required {
+      color: #f44336;
+      margin-left: 4px;
+    }
   }
 
   .select-container {
@@ -27,7 +32,7 @@
       cursor: pointer;
       transition: background-color 0.2s;
 
-      &:hover {
+      &:hover:not(:disabled) {
         background-color: #eeeeee;
       }
 
@@ -37,6 +42,15 @@
 
       &:focus ~ .arrow-icon .chevron {
         transform: rotate(225deg) translateY(-2px);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      &.error {
+        border: 2px solid #f44336;
       }
 
       option[disabled] {
@@ -70,9 +84,16 @@
   }
 
   .error-message {
-    display: block;
-    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
     color: #f44336;
     font-size: 12px;
+
+    i {
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
   }
 }
