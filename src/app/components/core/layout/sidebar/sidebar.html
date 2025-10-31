@@ -1,0 +1,47 @@
+<aside class="sidebar" [class.open]="isOpen">
+  <!-- Item da página atual (dinâmico) -->
+  <div class="current-page">
+    <i [class]="'ph ' + currentIcon"></i>
+    <span>{{ currentPageName }}</span>
+  </div>
+
+  <!-- Seção Área Ativa -->
+  <div class="sidebar-section">
+    <h2 class="section-title">ÁREA ATIVA</h2>
+
+    <a routerLink="/discussoes" class="sidebar-item" routerLinkActive="active">
+      <i class="ph ph-chats-circle"></i>
+      <span>Discussões</span>
+    </a>
+
+    <a routerLink="/projetos" class="sidebar-item" routerLinkActive="active">
+      <i class="ph ph-books"></i>
+      <span>Projetos Acadêmicos</span>
+    </a>
+
+    <a routerLink="/eventos" class="sidebar-item" routerLinkActive="active">
+      <i class="ph ph-calendar-blank"></i>
+      <span>Eventos Acadêmicos</span>
+    </a>
+  </div>
+
+  <!-- Seção Recursos e Administração -->
+  <div class="sidebar-section">
+    <h2 class="section-title">RECURSOS E ADMINISTRAÇÃO</h2>
+
+    <a routerLink="/usuarios" class="sidebar-item" routerLinkActive="active">
+      <i class="ph ph-users"></i>
+      <span>Usuários</span>
+    </a>
+
+    <a routerLink="/parametros" class="sidebar-item" routerLinkActive="active">
+      <i class="ph ph-gear"></i>
+      <span>Parâmetros de Sistema</span>
+    </a>
+
+    <a routerLink="/financeiro" class="sidebar-item" routerLinkActive="active">
+      <i class="ph ph-wallet"></i>
+      <span>Financeiro & Faturamento</span>
+    </a>
+  </div>
+</aside>
