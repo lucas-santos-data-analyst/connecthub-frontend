@@ -1,0 +1,5 @@
+<app-navbar (toggleSidebarEvent)="onToggleSidebar()"></app-navbar>
+<app-sidebar [isOpen]="isSidebarOpen"></app-sidebar>
+<main [class.sidebar-open]="isSidebarOpen">
+  <router-outlet></router-outlet>
+</main>
