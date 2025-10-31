@@ -1,0 +1,31 @@
+<div class="input-wrapper">
+  <!-- Label -->
+  @if (label) {
+    <label class="input-label">
+      {{ label }}
+      @if (required) {
+        <span class="required">*</span>
+      }
+    </label>
+  }
+
+  <!-- Input -->
+  <div class="input-container">
+    <input
+      [type]="type"
+      [placeholder]="placeholder"
+      [formControl]="inputControl"
+      [required]="required"
+      class="primary-input"
+      [class.error]="inputControl.hasError('required') && inputControl.touched"
+    />
+  </div>
+
+  <!-- Mensagem de erro -->
+  @if (inputControl.hasError('required') && inputControl.touched) {
+    <span class="error-message">
+      <i class="ph ph-warning-circle"></i>
+      {{ errorMessage || 'Este campo é obrigatório' }}
+    </span>
+  }
+</div>
