@@ -1,4 +1,5 @@
 <div class="input-wrapper">
+  <!-- Label -->
   @if (label) {
     <label class="input-label">
       {{ label }}
@@ -8,6 +9,7 @@
     </label>
   }
 
+  <!-- Input -->
   <div class="input-container">
     <input
       [type]="type"
@@ -19,6 +21,7 @@
     />
   </div>
 
+  <!-- Mensagem de erro -->
   @if (inputControl.hasError('required') && inputControl.touched) {
     <span class="error-message">
       <i class="ph ph-warning-circle"></i>

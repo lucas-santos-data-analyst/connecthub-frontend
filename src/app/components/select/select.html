@@ -1,4 +1,5 @@
 <div class="select-wrapper">
+  <!-- Label -->
   @if (label) {
     <label class="select-label">
       {{ label }}
@@ -8,6 +9,7 @@
     </label>
   }
 
+  <!-- Select -->
   <div class="select-container">
     <select
       [formControl]="selected"
@@ -23,11 +25,13 @@
       }
     </select>
 
+    <!-- Icon de seta -->
     <div class="arrow-icon">
       <span class="chevron"></span>
     </div>
   </div>
 
+  <!-- Mensagem de erro -->
   @if (selected.hasError('required') && selected.touched) {
     <span class="error-message">
       <i class="ph ph-warning-circle"></i>
