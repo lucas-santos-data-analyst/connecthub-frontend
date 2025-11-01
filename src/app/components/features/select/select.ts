@@ -30,20 +30,20 @@ export class Select implements ControlValueAccessor {
   @Input() required: boolean = false;
   @Input() errorMessage: string = '';
 
-  selected = new FormControl('');
+  selectControl = new FormControl('');
 
   onChange: any = () => {};
   onTouched: any = () => {};
 
   constructor() {
-    this.selected.valueChanges.subscribe((value) => {
+    this.selectControl.valueChanges.subscribe((value) => {
       this.onChange(value);
       this.onTouched();
     });
   }
 
   writeValue(value: any): void {
-    this.selected.setValue(value, { emitEvent: false });
+    this.selectControl.setValue(value, { emitEvent: false });
   }
 
   registerOnChange(fn: any): void {
@@ -55,6 +55,6 @@ export class Select implements ControlValueAccessor {
   }
 
   setDisabledState(isDisabled: boolean): void {
-    isDisabled ? this.selected.disable() : this.selected.enable();
+    isDisabled ? this.selectControl.disable() : this.selectControl.enable();
   }
 }

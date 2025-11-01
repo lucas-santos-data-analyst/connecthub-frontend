@@ -12,12 +12,12 @@
   <!-- Select -->
   <div class="select-container">
     <select
-      [formControl]="selected"
+      [formControl]="selectControl"
       [required]="required"
       class="custom-select"
-      [class.error]="selected.hasError('required') && selected.touched"
+      [class.error]="selectControl.hasError('required') && selectControl.touched"
     >
-      <option value="" disabled selected>{{ placeholder }}</option>
+      <option value="" disabled selectControl>{{ placeholder }}</option>
       @for (option of options; track option.value) {
         <option [value]="option.value" [disabled]="option.disabled || false">
           {{ option.label }}
@@ -32,7 +32,7 @@
   </div>
 
   <!-- Mensagem de erro -->
-  @if (selected.hasError('required') && selected.touched) {
+  @if (selectControl.hasError('required') && selectControl.touched) {
     <span class="error-message">
       <i class="ph ph-warning-circle"></i>
       {{ errorMessage || 'Este campo é obrigatório' }}
