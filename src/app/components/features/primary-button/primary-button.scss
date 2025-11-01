@@ -1,0 +1,103 @@
+:host {
+  display: inline-block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+
+  i {
+    flex-shrink: 0;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  &.btn-medium {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+
+    i {
+      font-size: 1.25rem;
+    }
+  }
+
+  &.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.btn-primary {
+    background-color: #9b7ed9;
+    color: #ffffff;
+
+    &:hover:not(:disabled) {
+      background-color: #8b6ec9;
+      box-shadow: 0 4px 12px rgba(155, 126, 217, 0.3);
+    }
+
+    &:active:not(:disabled) {
+      background-color: #7b5eb9;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: transparent;
+    color: #9b7ed9;
+    border: 2px solid #9b7ed9;
+
+    &:hover:not(:disabled) {
+      background-color: rgba(155, 126, 217, 0.1);
+      border-color: #8b6ec9;
+    }
+  }
+
+  &.btn-danger {
+    background-color: #f44336;
+    color: #ffffff;
+
+    &:hover:not(:disabled) {
+      background-color: #e53935;
+      box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+    }
+  }
+
+  &.btn-ghost {
+    background-color: transparent;
+    color: #7d7d89;
+    border: 1px solid #7d7d89;
+
+    &:hover:not(:disabled) {
+      background-color: rgba(125, 125, 137, 0.1);
+      border-color: #9d9da9;
+      color: #9d9da9;
+    }
+  }
+
+  &.btn-full-width {
+    width: 100%;
+  }
+}

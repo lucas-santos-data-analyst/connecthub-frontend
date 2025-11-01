@@ -1,0 +1,15 @@
+<button
+  [type]="type"
+  [disabled]="disabled"
+  [class]="'btn btn-' + variant + ' btn-' + size"
+  [class.btn-full-width]="fullWidth"
+  (click)="onClick()"
+>
+  @if (phIcon) {
+    <i [class]="'ph ' + phIcon"></i>
+  }
+  @if (label) {
+    <span>{{ label }}</span>
+  }
+  <ng-content></ng-content>
+</button>
