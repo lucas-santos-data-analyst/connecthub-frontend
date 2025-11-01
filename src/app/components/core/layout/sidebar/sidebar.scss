@@ -5,7 +5,7 @@
   width: 260px;
   height: calc(100vh - 56px);
   background-color: #1a1a1a;
-  padding: 24px 0;
+  padding: 1.5rem 0;
   overflow-y: auto;
   transform: translateX(0);
   transition: transform 0.3s ease;
@@ -37,16 +37,16 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 12px 24px;
+    padding: 1.25rem 1.5rem;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 500;
     margin-bottom: 8px;
     border-bottom: 1px solid #2a2a2a;
     padding-bottom: 20px;
 
     i {
-      font-size: 24px;
+      font-size: 1.5rem;
       color: #9b7ed9;
       flex-shrink: 0;
     }
@@ -60,7 +60,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 12px 24px;
+    padding: 0.75rem 1.5rem;
     color: #9e9e9e;
     text-decoration: none;
     font-size: 15px;
@@ -69,7 +69,7 @@
     cursor: pointer;
 
     i {
-      font-size: 22px;
+      font-size: 1.375rem;
       flex-shrink: 0;
     }
 
@@ -100,7 +100,7 @@
     }
 
     .section-title {
-      font-size: 11px;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.8px;
       color: #6e6e6e;
