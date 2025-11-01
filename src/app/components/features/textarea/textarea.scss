@@ -1,0 +1,76 @@
+// textarea.component.scss
+.textarea-wrapper {
+  width: 100%;
+
+  .textarea-label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #9e9e9e;
+    letter-spacing: 0.5px;
+
+    .required {
+      color: #f44336;
+      margin-left: 4px;
+    }
+  }
+
+  .textarea-container {
+    position: relative;
+    width: 100%;
+
+    .custom-textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-family: inherit;
+      line-height: 1.5;
+      color: #ffffff;
+      background-color: #1a1a1e;
+      border: 1px solid #7d7d89;
+      border-radius: 12px;
+      outline: none;
+      resize: vertical;
+      transition: all 0.2s;
+
+      &::placeholder {
+        color: #6e6e6e;
+      }
+
+      &:hover:not(:disabled) {
+        border-color: #9d9da9;
+      }
+
+      &:focus {
+        border-color: #9b7ed9;
+        background-color: #1f1f23;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        background-color: #0f0f11;
+      }
+
+      &.error {
+        border: 2px solid #f44336;
+      }
+    }
+  }
+
+  .error-message {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    color: #f44336;
+    font-size: 12px;
+
+    i {
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+  }
+}
