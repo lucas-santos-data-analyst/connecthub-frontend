@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0 20px;
+  padding: 0 50px;
   height: 56px;
   position: sticky;
   top: 0;
@@ -86,29 +86,6 @@
         color: #6e6e6e;
       }
     }
-
-    .code-button {
-      background: none;
-      border: none;
-      color: #6e6e6e;
-      cursor: pointer;
-      padding: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 3px;
-      transition: all 0.2s;
-      flex-shrink: 0;
-
-      i {
-        font-size: 18px;
-      }
-
-      &:hover {
-        color: #ffffff;
-        background-color: rgba(255, 255, 255, 0.08);
-      }
-    }
   }
 
   .spacer {
@@ -141,6 +118,6 @@
 
 ::ng-deep {
   .navbar.mat-toolbar {
-    padding: 0 20px !important;
+    padding: 0 50px !important;
   }
 }
