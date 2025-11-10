@@ -1,8 +1,17 @@
-<app-select
-  label="Estado"
-  placeholder="Selecione um estado"
-  [options]="estados"
-  formControlName="estado"
-  [required]="true"
-  errorMessage="Por favor, selecione um estado"
-/>
+<div>
+  <app-select
+    label="Estado"
+    placeholder="Selecione um estado"
+    [options]="estados"
+    formControlName="estado"
+    [required]="true"
+    errorMessage="Por favor, selecione um estado"
+  />
+  <app-primary-input
+    label="Nome do tópico"
+    placeholder="Digite o nome do tópico"
+    type="text"
+    [required]="true"
+    errorMessage="Campo Obrigatório"
+  ></app-primary-input>
+</div>
