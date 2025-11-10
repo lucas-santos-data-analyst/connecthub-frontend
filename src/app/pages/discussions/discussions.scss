@@ -1,0 +1,41 @@
+.discussoes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0;
+    }
+  }
+
+  .topics-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .loading,
+  .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #7d7d89;
+
+    i {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<div class="discussoes-container">
+  <header class="page-header">
+    <h1>Discussões</h1>
+    <app-primary-button
+      label="Nova Discussão"
+      phIcon="ph-plus"
+      variant="primary"
+      routerLink="/discussoes/nova"
+    />
+  </header>
+
+  @if (loading) {
+    <div class="loading">
+      <p>Carregando discussões...</p>
+    </div>
+  } @else if (topics.length === 0) {
+    <div class="empty-state">
+      <i class="ph ph-chat-circle-dots"></i>
+      <p>Nenhuma discussão encontrada</p>
+    </div>
+  } @else {
+    <div class="topics-grid"></div>
+  }
+</div>
