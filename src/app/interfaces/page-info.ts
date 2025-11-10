@@ -1,4 +1,4 @@
-interface PageInfo {
+interface IPageInfo {
   name: string;
   icon: string;
 }
