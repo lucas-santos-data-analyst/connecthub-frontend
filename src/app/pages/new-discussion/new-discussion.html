@@ -1,0 +1,68 @@
+<div class="post-discussion-wrapper">
+  <header>
+    <i
+      class="ph ph-arrow-circle-left"
+      routerLink="/home"
+      role="button"
+      aria-label="Voltar para home"
+    ></i>
+    <div class="post-discussion-texts">
+      <h1 class="main-title">Publicar Nova Discussão</h1>
+      <p class="description">
+        Publique o que você tem interesse ou precisa de ajuda para esclarecer sua dúvida.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <form [formGroup]="topicForm" (ngSubmit)="onSubmit()">
+      <div class="first-row">
+        <app-primary-input
+          label="Nome do Tópico"
+          placeholder="Digite o nome do Tópico"
+          type="text"
+          formControlName="nomeTopico"
+          [required]="true"
+          errorMessage="Campo Obrigatório"
+        />
+
+        <app-select
+          label="Selecione a Matéria para o Tópico"
+          placeholder="Selecione"
+          [options]="topicos"
+          formControlName="topicoSelecionado"
+          [required]="true"
+          errorMessage="Por favor, selecione uma matéria"
+        />
+      </div>
+
+      <div class="second-row">
+        <app-textarea
+          label="Conteúdo da discussão"
+          placeholder="Digite aqui o que você precisa compartilhar..."
+          formControlName="conteudo"
+          [rows]="8"
+          [required]="true"
+          errorMessage="Campo Obrigatório"
+        />
+      </div>
+
+      <div class="actions">
+        <app-primary-button
+          label="Cancelar"
+          phIcon="ph-x-circle"
+          variant="ghost"
+          (buttonClick)="onCancel()"
+        />
+
+        <app-primary-button
+          label="Publicar"
+          phIcon="ph-check-circle"
+          variant="primary"
+          type="submit"
+          [disabled]="!topicForm.valid"
+        />
+      </div>
+    </form>
+  </main>
+</div>
