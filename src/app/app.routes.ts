@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 import { Layout } from './components/core/layout/layout';
 import { Home } from './pages/home/home';
-import { PostDiscussion } from './pages/post-discussion/post-discussion';
+import { Discussions } from './pages/discussions/discussions';
+import { NewDiscussion } from './pages/new-discussion/new-discussion';
 
 export const routes: Routes = [
   {
@@ -19,7 +20,11 @@ export const routes: Routes = [
       },
       {
         path: 'discussoes',
-        component: PostDiscussion,
+        component: Discussions,
+      },
+      {
+        path: 'discussoes/nova',
+        component: NewDiscussion,
       },
     ],
   },
