@@ -3,11 +3,6 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
-interface PageInfo {
-  name: string;
-  icon: string;
-}
-
 @Component({
   selector: 'app-sidebar',
   standalone: true,
@@ -22,7 +17,7 @@ export class Sidebar implements OnInit {
   currentIcon: string = 'ph-house';
 
   // Mapeamento de rotas para páginas
-  private routeMap: { [key: string]: PageInfo } = {
+  private routeMap: { [key: string]: IPageInfo } = {
     '/home': { name: 'Home', icon: 'ph-house' },
     '/discussoes': { name: 'Discussões', icon: 'ph-chats-circle' },
     '/projetos': { name: 'Projetos Acadêmicos', icon: 'ph-books' },
