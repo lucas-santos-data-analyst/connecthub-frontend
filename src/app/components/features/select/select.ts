@@ -6,7 +6,7 @@ import {
   ReactiveFormsModule,
   FormControl,
 } from '@angular/forms';
-import { SelectOptionI } from '../../../interfaces/SelectOptionI';
+import { ISelectOption } from '../../../interfaces/select-option';
 
 @Component({
   selector: 'app-select',
@@ -25,7 +25,7 @@ import { SelectOptionI } from '../../../interfaces/SelectOptionI';
 export class Select implements ControlValueAccessor {
   @Input() label: string = '';
   @Input() placeholder: string = 'Selecione';
-  @Input() options: SelectOptionI[] = [];
+  @Input() options: ISelectOption[] = [];
   @Input() disabled: boolean = false;
   @Input() required: boolean = false;
   @Input() errorMessage: string = '';
